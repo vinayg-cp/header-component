@@ -1,5 +1,5 @@
 {
-    "name": "header-component",
+    "name": "@vinayg-cp/header-component",
     "version": "1.0.0",
     "main": "dist/index.js",
     "repository": "https://github.com/vinayg-cp/header-component.git",
