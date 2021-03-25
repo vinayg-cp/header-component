@@ -1,21 +1,3 @@
-
-
-function ___$insertStyle(css) {
-  if (!css) {
-    return;
-  }
-  if (typeof window === 'undefined') {
-    return;
-  }
-
-  var style = document.createElement('style');
-
-  style.setAttribute('type', 'text/css');
-  style.innerHTML = css;
-  document.head.appendChild(style);
-  return css;
-}
-
 Object.defineProperty(exports, '__esModule', { value: true });
 
 var React = require('react');
@@ -43,9 +25,31 @@ function _interopNamespace(e) {
 var React__namespace = /*#__PURE__*/_interopNamespace(React);
 
 var Navbar = function () {
-    return (React__namespace.createElement(React__namespace.Fragment, null,
-        React__namespace.createElement("div", null, " Hello Navbar "),
-        React__namespace.createElement("p", null, "Adding demo content")));
+    return (React__namespace.createElement("nav", { className: "navbar", role: "navigation", "aria-label": "main navigation" },
+        React__namespace.createElement("div", { className: "navbar-brand" },
+            React__namespace.createElement("a", { href: "https://bulma.io", className: "navbar-item" },
+                React__namespace.createElement("img", { src: "https://bulma.io/images/bulma-logo.png", alt: "Logo", width: 120, height: 80 })),
+            React__namespace.createElement("a", { role: "button", className: "navbar-burger", "aria-label": "menu", "aria-expanded": "false", "data-target": "navbarBasicExample" },
+                React__namespace.createElement("span", { "aria-hidden": "true" }),
+                React__namespace.createElement("span", { "aria-hidden": "true" }),
+                React__namespace.createElement("span", { "aria-hidden": "true" }))),
+        React__namespace.createElement("div", { id: "navbarBasicExample", className: "navbar-menu" },
+            React__namespace.createElement("div", { className: "navbar-start" },
+                React__namespace.createElement("a", { className: "navbar-item" }, "Home"),
+                React__namespace.createElement("a", { className: "navbar-item" }, "About Us"),
+                React__namespace.createElement("div", { className: "navbar-item has-dropdown is-hoverable" },
+                    React__namespace.createElement("a", { className: "navbar-link" }, "Locations"),
+                    React__namespace.createElement("div", { className: "navbar-dropdown" },
+                        React__namespace.createElement("a", { className: "navbar-item" }, "Location 1"),
+                        React__namespace.createElement("a", { className: "navbar-item" }, "Location 2"))),
+                React__namespace.createElement("a", { className: "navbar-item" }, "Storage Tips"),
+                React__namespace.createElement("a", { className: "navbar-item" }, "Contact Us")),
+            React__namespace.createElement("div", { className: "navbar-end" },
+                React__namespace.createElement("div", { className: "navbar-item" },
+                    React__namespace.createElement("div", { className: "buttons" },
+                        React__namespace.createElement("a", { className: "button is-primary" },
+                            React__namespace.createElement("strong", null, "Pay Rent")),
+                        React__namespace.createElement("a", { className: "button is-light" }, "Log in")))))));
 };
 
 exports.default = Navbar;
